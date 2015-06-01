@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="WindowController">
+            <connections>
+                <outlet property="_colorWell" destination="70k-e9-ABb" id="Fzz-zL-LxH"/>
+                <outlet property="blueColor" destination="utq-Qu-GpC" id="L4t-iq-Ljr"/>
+                <outlet property="categoriesColor" destination="se7-bi-iu8" id="0DN-7l-6J9"/>
+                <outlet property="colorMenu" destination="ewF-8K-Mjh" id="Fdg-Vp-7f3"/>
+                <outlet property="colorWellView" destination="CyJ-Aj-iNu" id="BZa-iz-s7y"/>
+                <outlet property="greenColor" destination="8F9-BJ-xyr" id="12V-qZ-Kz8"/>
+                <outlet property="hexaColor" destination="B86-qZ-aYB" id="DJe-Wg-HNN"/>
+                <outlet property="moveColorMenu" destination="hRi-VB-6oR" id="a2q-AH-MYN"/>
+                <outlet property="nsColorString" destination="Kq4-Kf-EmR" id="RKh-Q6-5y6"/>
+                <outlet property="nsColorStringCopied" destination="Yzq-RW-XA8" id="COH-6J-8OO"/>
+                <outlet property="popUpSwatches" destination="pWW-Si-5k5" id="oWX-lD-xQ9"/>
+                <outlet property="redColor" destination="RhN-Bv-u1K" id="GKI-2K-Lb1"/>
+                <outlet property="removeColorMenu" destination="OI9-aC-kju" id="8Cs-lx-6Ho"/>
+                <outlet property="subMenu" destination="Wem-aK-GDK" id="snp-He-xdR"/>
+                <outlet property="swatchesMenu" destination="1kx-AX-5PQ" id="qRU-UZ-nU0"/>
+                <outlet property="uiColorString" destination="xqV-TF-7Wg" id="QIN-Lv-6v6"/>
+                <outlet property="uiColorStringCopied" destination="7DR-Tb-hbc" id="jvl-va-uyR"/>
+                <outlet property="window" destination="qoN-GP-Lv1" id="cHC-di-Qvg"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Color Picker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="qoN-GP-Lv1" customClass="INAppStoreWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="496" height="266"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <view key="contentView" id="WoC-BW-ZLK">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="266"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="CyJ-Aj-iNu">
+                        <rect key="frame" x="15" y="182" width="120" height="70"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <colorWell id="70k-e9-ABb">
+                                <rect key="frame" x="-7" y="-12" width="142" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="colorchange:" target="-2" id="pwS-pa-K6a"/>
+                                </connections>
+                            </colorWell>
+                        </subviews>
+                    </customView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OSC-rV-oze">
+                        <rect key="frame" x="14" y="181" width="122" height="72"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="axesIndependently" image="PickerShadow" id="ayh-oG-D7u"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="4" id="Kq4-Kf-EmR" customClass="RadiusTextField">
+                        <rect key="frame" x="15" y="97" width="300" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="[NSColor colorWithCalibratedRed:0.894 green:0.894 blue:0.902 alpha:1]" drawsBackground="YES" id="Cl0-AZ-PBY">
+                            <font key="font" size="15" name="CourierNewPSMT"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Yzq-RW-XA8" customClass="RadiusTextField">
+                        <rect key="frame" x="15" y="97" width="300" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title=" Copied to Clipboard" drawsBackground="YES" id="z4L-vJ-Qds">
+                            <font key="font" size="16" name="ShreeDev0714-Bold"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button tag="1" id="7ca-pe-VdS" userLabel="Copy NSColor Button">
+                        <rect key="frame" x="15" y="97" width="300" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="TiU-h1-Jm9">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="copyCodeString:" target="-2" id="wIC-EQ-uU7"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" tag="5" id="xqV-TF-7Wg" customClass="RadiusTextField">
+                        <rect key="frame" x="15" y="13" width="300" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="[UIColor colorWithRed:0.894 green:0.894 blue:0.902 alpha:1]" drawsBackground="YES" id="ir0-T1-wLa">
+                            <font key="font" size="15" name="CourierNewPSMT"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="7DR-Tb-hbc" customClass="RadiusTextField">
+                        <rect key="frame" x="15" y="13" width="300" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title=" Copied to Clipboard" drawsBackground="YES" id="jk3-to-pQV">
+                            <font key="font" size="16" name="ShreeDev0714-Bold"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button tag="2" id="28J-we-zDP" userLabel="Copy UIColor Button">
+                        <rect key="frame" x="15" y="13" width="300" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="GpG-2E-WqY">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="copyCodeString:" target="-2" id="WCr-Z0-LL9"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" tag="4" id="utq-Qu-GpC" customClass="RadiusTextField">
+                        <rect key="frame" x="265" y="182" width="50" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="center" title="255" drawsBackground="YES" id="Cal-1s-y5r">
+                            <font key="font" size="14" name="LaoSangamMN"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" tag="2" id="RhN-Bv-u1K" customClass="RadiusTextField">
+                        <rect key="frame" x="145" y="182" width="50" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="center" title="255" drawsBackground="YES" id="W59-Hg-3tK">
+                            <font key="font" size="14" name="LaoSangamMN"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="se7-bi-iu8" customClass="DragScrollView">
+                        <rect key="frame" x="327" y="47" width="170" height="220"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <clipView key="contentView" id="SX7-ld-HDH">
+                            <rect key="frame" x="1" y="1" width="153" height="218"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view id="Fjs-Lo-cpA">
+                                    <rect key="frame" x="0.0" y="308" width="166" height="249"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" red="0.31764705879999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="VMg-03-9WG">
+                            <rect key="frame" x="1" y="80" width="166" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Qjd-qK-pO4">
+                            <rect key="frame" x="167" y="1" width="15" height="79"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField verticalHuggingPriority="750" tag="3" id="8F9-BJ-xyr" customClass="RadiusTextField">
+                        <rect key="frame" x="205" y="182" width="50" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="center" title="255" drawsBackground="YES" id="E3c-oY-S6z">
+                            <font key="font" size="14" name="LaoSangamMN"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" tag="1" id="B86-qZ-aYB" customClass="RadiusHexaTextField">
+                        <rect key="frame" x="145" y="227" width="110" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="center" title="FFFFFF" drawsBackground="YES" id="1D8-dg-dH7">
+                            <font key="font" size="14" name="LaoSangamMN"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button id="9Dm-Sn-MHh">
+                        <rect key="frame" x="358" y="8" width="108" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="deleteButton" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="T4S-Ya-exg">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="deleteButtonClicked:" target="-2" id="VPV-6A-nt2"/>
+                        </connections>
+                    </button>
+                    <button id="qNf-Lh-I9T">
+                        <rect key="frame" x="280" y="230" width="21" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRevealFreestandingTemplate" imagePosition="overlaps" alignment="center" state="on" imageScaling="axesIndependently" inset="2" id="x8d-6P-laH">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="pickButtonCliked:" target="-2" id="Ftm-PQ-e7t"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="VO9-Rj-TxO"/>
+            </connections>
+            <point key="canvasLocation" x="326" y="405"/>
+        </window>
+        <menu id="ewF-8K-Mjh">
+            <items>
+                <menuItem title="Move Color To..." id="hRi-VB-6oR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" id="Wem-aK-GDK">
+                        <items>
+                            <menuItem title="Item 1" id="bG9-oC-1bM">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Item 2" id="bND-cd-RRQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Item 3" id="CCa-XY-1WR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="68e-4n-hud"/>
+                <menuItem title="Remove Color" id="OI9-aC-kju">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="removeColorFromCollection:" target="-2" id="a6f-LG-po8"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="347" y="128.5"/>
+        </menu>
+        <menu id="1kx-AX-5PQ">
+            <items>
+                <menuItem title="Swatches" state="on" id="huW-EU-kzP">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="oU8-49-wax"/>
+            </items>
+            <point key="canvasLocation" x="622.5" y="97.5"/>
+        </menu>
+        <popUpButton id="HJb-ov-uEK">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="26"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <popUpButtonCell key="cell" type="bevel" bezelStyle="regularSquare" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="uP5-xo-itC">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="menu"/>
+                <menu key="menu" id="30g-bV-Adu">
+                    <items>
+                        <menuItem title="Item 1" id="Zfd-My-ViP"/>
+                        <menuItem title="Item 2" id="l8w-Mw-AlV"/>
+                        <menuItem title="Item 3" id="EdP-PQ-3Bf"/>
+                    </items>
+                </menu>
+            </popUpButtonCell>
+            <point key="canvasLocation" x="340" y="201.5"/>
+        </popUpButton>
+        <popUpButton verticalHuggingPriority="750" id="pWW-Si-5k5">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="26"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <popUpButtonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" imagePosition="left" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="3wA-QJ-N0U">
+                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                <font key="font" metaFont="menu"/>
+                <menu key="menu" id="QIq-jo-Eov">
+                    <items>
+                        <menuItem title="Item 1" id="ccN-Sg-U7E"/>
+                        <menuItem title="Item 2" id="iRC-N5-TqY"/>
+                        <menuItem title="Item 3" id="xal-kV-8eg"/>
+                    </items>
+                </menu>
+                <connections>
+                    <action selector="popUpSwatchesSeclected:" target="-2" id="hpV-de-1Cx"/>
+                </connections>
+            </popUpButtonCell>
+            <point key="canvasLocation" x="495.5" y="195.5"/>
+        </popUpButton>
+    </objects>
+    <resources>
+        <image name="NSRevealFreestandingTemplate" width="14" height="14"/>
+        <image name="PickerShadow" width="120" height="73"/>
+        <image name="deleteButton" width="108" height="32"/>
+    </resources>
+</document>

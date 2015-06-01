@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferenceController">
+            <connections>
+                <outlet property="appendsemiCheckbox" destination="9Hc-J6-rD8" id="r0j-S7-d9s"/>
+                <outlet property="avancedView" destination="OdL-xO-S0c" id="vhL-JX-81f"/>
+                <outlet property="displayFormatPopUp" destination="oFQ-GL-196" id="Kd8-iK-lwM"/>
+                <outlet property="formatView" destination="MJB-Yk-ZII" id="dVi-E1-NFO"/>
+                <outlet property="generalView" destination="4H8-CE-Eyn" id="YeL-xD-BAy"/>
+                <outlet property="hideWindowCheckbox" destination="GKI-Hh-P9q" id="cFq-BY-29G"/>
+                <outlet property="shortcutShowColorPicker" destination="21j-zG-qVm" id="Ud0-Zt-P33"/>
+                <outlet property="shortcutShowMagnifier" destination="MVf-Ya-aar" id="3Gl-15-OhI"/>
+                <outlet property="showAppIconPopUp" destination="aop-0r-0hJ" id="V2s-rx-2ln"/>
+                <outlet property="showWindowCheckbox" destination="VLn-NE-kCl" id="cML-ie-Lej"/>
+                <outlet property="sourceCodePopup" destination="1hQ-fh-n0N" id="CIG-CQ-zZM"/>
+                <outlet property="swatchesView" destination="12z-Yj-nAl" id="nKg-ev-uxi"/>
+                <outlet property="tableSwatches" destination="MHh-8B-n7r" id="XH8-zz-gUx"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+                <outlet property="windowView" destination="se5-gp-TjO" id="DWc-2h-vCB"/>
+                <outlet property="zeroSuppresCheckbox" destination="cma-Pi-9Ct" id="UM1-SK-q9A"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Preferenced" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1366" height="745"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="533F4496-5B8D-4D5F-AFA4-96E543644EB0" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="C5J-9K-sPG">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="79C757C1-177C-4B2A-9D08-3CCC5D360FE4" label="General" paletteLabel="general" image="NSPreferencesGeneral" id="0Bz-Bx-cAX">
+                        <connections>
+                            <action selector="toolbarGeneral:" target="-2" id="UtN-U3-JWi"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="54BF9D8C-88E2-40DB-B875-A6DC20BE1BBC" label="Swatches" paletteLabel="Swatches" tag="1" image="SwatchToolbar" id="4C9-wl-oa3">
+                        <connections>
+                            <action selector="toolbarSwatches:" target="-2" id="y0k-la-rho"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C0267DA6-377F-4619-A17B-25760E33B911" label="Format" paletteLabel="Format" tag="2" image="NSColorPanel" id="cJk-Cw-B4S">
+                        <connections>
+                            <action selector="toolbarFormat:" target="-2" id="BWf-B4-Rgj"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="57609F93-DDA1-4510-9FF5-E0E730B6E3FD" label="Advanced" paletteLabel="Advanced" tag="3" image="NSAdvanced" id="dbK-Qe-aEE">
+                        <connections>
+                            <action selector="toolbarAdvance:" target="-2" id="XoX-Oh-3s5"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="0Bz-Bx-cAX"/>
+                    <toolbarItem reference="4C9-wl-oa3"/>
+                    <toolbarItem reference="cJk-Cw-B4S"/>
+                    <toolbarItem reference="dbK-Qe-aEE"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+        <customView id="4H8-CE-Eyn" userLabel="General">
+            <rect key="frame" x="0.0" y="-2" width="376" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="KpM-Lh-1LK">
+                    <rect key="frame" x="18" y="144" width="121" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Show color picker:" id="kGc-aM-VaM">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView id="21j-zG-qVm" customClass="MASShortcutView">
+                    <rect key="frame" x="155" y="142" width="190" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="xDv-UW-ijE">
+                    <rect key="frame" x="18" y="115" width="121" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Toggle magnifier:" id="c9l-2e-aCe">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="pLx-Os-gxP">
+                    <rect key="frame" x="153" y="65" width="194" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="These are global shortcuts so they work from any where in the system" id="ZxA-wK-4Tr">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.39311079545454541" green="0.39311079545454541" blue="0.39311079545454541" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="lPD-Eo-bUt">
+                    <rect key="frame" x="20" y="54" width="344" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <popUpButton verticalHuggingPriority="750" id="aop-0r-0hJ">
+                    <rect key="frame" x="153" y="17" width="195" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="LBU-cU-Hpq">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="QH6-aA-mcu">
+                            <items>
+                                <menuItem title="Only in Dock" id="qcg-ix-7sx"/>
+                                <menuItem title="Dock and Menu Bar" tag="1" id="xf5-Bs-qk1"/>
+                                <menuItem title="Only in Menu Bar" tag="2" id="Zyq-rj-TgM"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="showAppIcon:" target="-2" id="80W-Fl-Qap"/>
+                    </connections>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="t9c-qy-OmK">
+                    <rect key="frame" x="18" y="22" width="121" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Show app icon in:" id="9EO-5u-PSh">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView id="MVf-Ya-aar" customClass="MASShortcutView">
+                    <rect key="frame" x="155" y="113" width="190" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
+            </subviews>
+            <point key="canvasLocation" x="221" y="659"/>
+        </customView>
+        <customView id="12z-Yj-nAl" userLabel="swatches">
+            <rect key="frame" x="0.0" y="-5" width="376" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button id="cwI-vn-Vq4">
+                    <rect key="frame" x="20" y="20" width="27" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Br7-a0-vR8">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="addSwatches:" target="-2" id="I5g-k0-nuP"/>
+                    </connections>
+                </button>
+                <button id="Jer-NQ-w5N">
+                    <rect key="frame" x="46" y="20" width="27" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NHp-Ee-gan">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <action selector="removeSwatches:" target="-2" id="9KZ-uG-LoB"/>
+                        </connections>
+                    </buttonCell>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="fez-au-shv">
+                    <rect key="frame" x="79" y="19" width="279" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="Note: Drag and drop to reorder your collections." id="InJ-Ea-8na">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.3931107955" green="0.3931107955" blue="0.3931107955" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView autohidesScrollers="YES" horizontalLineScroll="23" horizontalPageScroll="10" verticalLineScroll="23" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="V98-Ty-tT0">
+                    <rect key="frame" x="20" y="40" width="336" height="140"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <clipView key="contentView" id="QBr-nB-xfR">
+                        <rect key="frame" x="1" y="1" width="334" height="138"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="21" id="MHh-8B-n7r">
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="23"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <size key="intercellSpacing" width="3" height="2"/>
+                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
+                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                <tableColumns>
+                                    <tableColumn identifier="SwatchesColumn" width="331" minWidth="40" maxWidth="1000" id="UED-PN-rYw">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                            <font key="font" metaFont="smallSystem"/>
+                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                        </tableHeaderCell>
+                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="left" tag="5" id="PxO-uX-Hiq">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="key"/>
+                                        <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                    </tableColumn>
+                                </tableColumns>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ywl-aH-Pqt" id="bL1-Sq-cdl"/>
+                                    <outlet property="delegate" destination="Ywl-aH-Pqt" id="d6j-Hw-Qs3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <nil key="backgroundColor"/>
+                    </clipView>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="43I-tj-qOp">
+                        <rect key="frame" x="1" y="119" width="223" height="15"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="Ies-B6-hRj">
+                        <rect key="frame" x="224" y="17" width="15" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+            </subviews>
+            <point key="canvasLocation" x="650" y="638"/>
+        </customView>
+        <customView id="MJB-Yk-ZII" userLabel="format">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton verticalHuggingPriority="750" id="1hQ-fh-n0N">
+                    <rect key="frame" x="159" y="198" width="195" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="MYO-Wy-oXg">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="T2T-fB-57Z">
+                            <items>
+                                <menuItem title="Objective-C" id="rZd-o9-Ksn"/>
+                                <menuItem title="Swift" tag="1" id="jyu-hs-wDa"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="showSourceCode:" target="-2" id="VZ0-cL-aYq"/>
+                    </connections>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="UBc-pA-9PW">
+                    <rect key="frame" x="24" y="203" width="121" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Source code:" id="hCE-fr-TPw">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button id="9Hc-J6-rD8">
+                    <rect key="frame" x="159" y="165" width="194" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Append semicolon" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="rhH-ND-6h7">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="appendSemiColon:" target="-2" id="tvk-7I-QYX"/>
+                    </connections>
+                </button>
+                <button id="cma-Pi-9Ct">
+                    <rect key="frame" x="158" y="137" width="195" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Enable zero suppression" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Zbv-zP-nXl">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="enableZeroSupperssion:" target="-2" id="Uad-cs-h5H"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="xdE-ID-NLl">
+                    <rect key="frame" x="159" y="104" width="194" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="Removes redundant zeroes from the float numbers" id="a7r-eK-DQG">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.3931107955" green="0.3931107955" blue="0.3931107955" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="wzL-bf-xrZ">
+                    <rect key="frame" x="164" y="18" width="194" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="Configures the displayed format when a color is represented as text." id="dXP-PP-Lqi">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.3931107955" green="0.3931107955" blue="0.3931107955" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="Vxd-3D-i9g">
+                    <rect key="frame" x="16" y="88" width="348" height="5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="0jK-ug-y0T">
+                    <rect key="frame" x="24" y="52" width="121" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Displayed format:" id="8nP-ne-67g">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" id="oFQ-GL-196">
+                    <rect key="frame" x="164" y="47" width="195" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="dEK-a6-Bb7">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="9Sf-tV-qir">
+                            <items>
+                                <menuItem title="RGB value" id="YLH-1L-XPE"/>
+                                <menuItem title="HEX value" tag="1" id="5iK-XE-n57"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="showDisplayedFormat:" target="-2" id="CbH-hL-yEI"/>
+                    </connections>
+                </popUpButton>
+            </subviews>
+            <point key="canvasLocation" x="748" y="306"/>
+        </customView>
+        <customView id="OdL-xO-S0c" userLabel="advanced">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button id="GKI-Hh-P9q">
+                    <rect key="frame" x="18" y="56" width="340" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Hide main window while using the magnifier" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="iLK-8W-vfa">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="hideWindowOnMagnifier:" target="-2" id="VKd-jw-LKD"/>
+                    </connections>
+                </button>
+                <button id="VLn-NE-kCl">
+                    <rect key="frame" x="18" y="23" width="340" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Show main window after selecting a color" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="bOc-pE-MDP">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showWindowAfterMagnifier:" target="-2" id="gqe-yl-v7E"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="1103" y="610"/>
+        </customView>
+        <customObject id="Ywl-aH-Pqt" customClass="SwatchesController">
+            <connections>
+                <outlet property="addSwatchesButton" destination="cwI-vn-Vq4" id="J9A-4P-z9w"/>
+                <outlet property="removeSwatchesButton" destination="Jer-NQ-w5N" id="RAk-PP-jjr"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="NSColorPanel" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="SwatchToolbar" width="32" height="32"/>
+    </resources>
+</document>
