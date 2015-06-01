@@ -82,13 +82,13 @@
     
     if (imageRef) {
         CGImageRelease(imageRef);
-        imageRef = NULL;
+        imageRef = nil;
     }
     imageRef = CGWindowListCreateImage(CGRectMake(x, y, captureSize, captureSize), kCGWindowListOptionOnScreenBelowWindow, windowID, kCGWindowImageNominalResolution);
         
 //    NSImage *image = [[NSImage alloc] initWithCGImage:imageRef size:NSZeroSize];
     
-    if (imageRef == NULL) {
+    if (imageRef == nil) {
         return;
     }
     
@@ -104,6 +104,7 @@
     [self setFrameOrigin:NSMakePoint(floor(point.x) - floor(self.frame.size.width / 2), floor(point.y) - floor(self.frame.size.height / 2))];
     
     ScreenPickerView *captureView = (ScreenPickerView *)self.contentView;
+    [captureView setImageRef:imageRef];
     if(isHexColoValue)
         [tex setStringValue:[color hexadecimalValue]];
     else
@@ -112,7 +113,6 @@
                              [color greenValue],
                              [color blueValue]]];
     [captureView addSubview:tex];
-    [captureView setImageRef:imageRef];
     [captureView setNeedsDisplay:YES];
     [super mouseMoved:event];
 }

@@ -356,6 +356,7 @@
             NSInteger leng = [value stringValue].length;
             if(leng < 6){
                 //NSLog(@"%@",[value stringValue]);
+                hexColor=@"";
                 for(int i=0;i<6-leng;i++){
                     hexColor = [hexColor stringByAppendingString:@"0"];
                 }

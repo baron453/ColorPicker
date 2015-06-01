@@ -25,12 +25,8 @@
     CGPathRelease(path);
     if (_imageRef) {
         // draw image
-        @try{
-            CGContextSetRenderingIntent(context, kCGRenderingIntentRelativeColorimetric);
-            CGContextDrawImage(context, NSRectToCGRect(self.bounds), _imageRef);
-        }@catch(NSException *p){
-            
-        }
+        CGContextSetRenderingIntent(context, kCGRenderingIntentRelativeColorimetric);
+        CGContextDrawImage(context, NSRectToCGRect(self.bounds), _imageRef);
     }
     
     // draw the aperture

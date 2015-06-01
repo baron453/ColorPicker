@@ -132,7 +132,6 @@ static NSString *const MASCustomShortcutKeyMagnifier = @"customShortcutMagnifier
 }
 - (void)updateCopiedStatusMenu{
     BOOL isHexDisplayFormat = [[[NSUserDefaults standardUserDefaults] objectForKey:@"DisplayedFormat"] integerValue];
-    NSInteger colorCopiedArrayCount = colorCopiedArray.count;
     NSInteger posSeparatorCopiedColor = [_statusMenu indexOfItem:_separatorCopiedColorItem];
     for(NSInteger i=1;i<posSeparatorCopiedColor;i++){
         [_statusMenu removeItemAtIndex:1];
@@ -145,9 +144,10 @@ static NSString *const MASCustomShortcutKeyMagnifier = @"customShortcutMagnifier
         }
     }
     [colorCopiedArray addObject:color];
-    if (colorCopiedArrayCount>5) {
+    if (colorCopiedArray.count>5) {
         [colorCopiedArray removeObjectAtIndex:0];
     }
+    NSLog(@"count %lu",(unsigned long)colorCopiedArray.count);
     for(NSInteger i=0;i<colorCopiedArray.count;i++){
         NSColor *colors =[colorCopiedArray objectAtIndex:i];
         if (isHexDisplayFormat) {
