@@ -147,7 +147,7 @@ static NSString *const MASCustomShortcutKeyMagnifier = @"customShortcutMagnifier
     if (colorCopiedArray.count>5) {
         [colorCopiedArray removeObjectAtIndex:0];
     }
-    NSLog(@"count %lu",(unsigned long)colorCopiedArray.count);
+    //NSLog(@"count %lu",(unsigned long)colorCopiedArray.count);
     for(NSInteger i=0;i<colorCopiedArray.count;i++){
         NSColor *colors =[colorCopiedArray objectAtIndex:i];
         if (isHexDisplayFormat) {
@@ -272,6 +272,9 @@ static NSString *const MASCustomShortcutKeyMagnifier = @"customShortcutMagnifier
         case 1:
             if(!_statusItem){
                 _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+                NSImage *image = [NSImage imageNamed:@"SwatchMenu"];
+                [image setTemplate:YES];
+                [_statusItem setImage:image];
                 [_statusItem setView:_statusView];
                 [_statusItem setHighlightMode:YES];
                 [_statusItem setMenu:_statusMenu];
@@ -284,6 +287,9 @@ static NSString *const MASCustomShortcutKeyMagnifier = @"customShortcutMagnifier
         case 2:
             if(!_statusItem){
                 _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+                NSImage *image = [NSImage imageNamed:@"SwatchMenu"];
+                [image setTemplate:YES];
+                [_statusItem setImage:image];
                 [_statusItem setView:_statusView];
                 [_statusItem setHighlightMode:YES];
                 [_statusItem setMenu:_statusMenu];

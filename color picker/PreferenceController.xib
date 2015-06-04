@@ -95,15 +95,6 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="pLx-Os-gxP">
-                    <rect key="frame" x="153" y="65" width="194" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="These are global shortcuts so they work from any where in the system" id="ZxA-wK-4Tr">
-                        <font key="font" metaFont="system" size="10"/>
-                        <color key="textColor" red="0.39311079545454541" green="0.39311079545454541" blue="0.39311079545454541" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="lPD-Eo-bUt">
                     <rect key="frame" x="20" y="54" width="344" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -142,6 +133,15 @@
                     <rect key="frame" x="155" y="113" width="190" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="pLx-Os-gxP">
+                    <rect key="frame" x="153" y="65" width="194" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="justified" title="These are global shortcuts so they work from anywhere in the system" id="ZxA-wK-4Tr">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.39311079545454541" green="0.39311079545454541" blue="0.39311079545454541" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <point key="canvasLocation" x="221" y="659"/>
         </customView>
@@ -237,12 +237,12 @@
                 <popUpButton verticalHuggingPriority="750" id="1hQ-fh-n0N">
                     <rect key="frame" x="159" y="198" width="195" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="MYO-Wy-oXg">
+                    <popUpButtonCell key="cell" type="push" title="Objective-C" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rZd-o9-Ksn" id="MYO-Wy-oXg">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="T2T-fB-57Z">
                             <items>
-                                <menuItem title="Objective-C" id="rZd-o9-Ksn"/>
+                                <menuItem title="Objective-C" state="on" id="rZd-o9-Ksn"/>
                                 <menuItem title="Swift" tag="1" id="jyu-hs-wDa"/>
                             </items>
                         </menu>
@@ -324,8 +324,8 @@
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="9Sf-tV-qir">
                             <items>
-                                <menuItem title="RGB value" id="YLH-1L-XPE"/>
-                                <menuItem title="HEX value" tag="1" id="5iK-XE-n57"/>
+                                <menuItem title="RGB Value" id="YLH-1L-XPE"/>
+                                <menuItem title="HEX Value" tag="1" id="5iK-XE-n57"/>
                             </items>
                         </menu>
                     </popUpButtonCell>

@@ -10,6 +10,7 @@
 		640866301B0C379100EB60B9 /* RadiusColorWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6408662F1B0C379100EB60B9 /* RadiusColorWell.m */; };
 		640866331B0C49D000EB60B9 /* NSColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 640866321B0C49D000EB60B9 /* NSColor+hex.m */; };
 		640866371B0C7C2800EB60B9 /* OnlyIntegerValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 640866361B0C7C2800EB60B9 /* OnlyIntegerValueFormatter.m */; };
+		6415A30F1B20053A007C07FB /* SwatchMenuDown.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 6415A30E1B20053A007C07FB /* SwatchMenuDown.tiff */; };
 		642881431B1177160017305D /* StatusResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 642881421B1177160017305D /* StatusResponder.m */; };
 		64311D301B0D8AC3005EF600 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64311D2E1B0D8AC3005EF600 /* PreferenceController.m */; };
 		64311D311B0D8AC3005EF600 /* PreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64311D2F1B0D8AC3005EF600 /* PreferenceController.xib */; };
@@ -133,6 +134,7 @@
 		640866321B0C49D000EB60B9 /* NSColor+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+hex.m"; sourceTree = "<group>"; };
 		640866351B0C7C2800EB60B9 /* OnlyIntegerValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlyIntegerValueFormatter.h; sourceTree = "<group>"; };
 		640866361B0C7C2800EB60B9 /* OnlyIntegerValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlyIntegerValueFormatter.m; sourceTree = "<group>"; };
+		6415A30E1B20053A007C07FB /* SwatchMenuDown.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SwatchMenuDown.tiff; sourceTree = "<group>"; };
 		642881411B1177160017305D /* StatusResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusResponder.h; sourceTree = "<group>"; };
 		642881421B1177160017305D /* StatusResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusResponder.m; sourceTree = "<group>"; };
 		64311D2D1B0D8AC3005EF600 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		647FF9A51B14139700E23A62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6415A30E1B20053A007C07FB /* SwatchMenuDown.tiff */,
 				64D5E12A1B181899003188E8 /* deleteButton.png */,
 				64D5E1281B1817CF003188E8 /* backgroundButtonView.png */,
 				64311D321B0D8BD2005EF600 /* SwatchMenu.tiff */,
@@ -798,6 +801,7 @@
 				64D5E1291B1817CF003188E8 /* backgroundButtonView.png in Resources */,
 				64311D311B0D8AC3005EF600 /* PreferenceController.xib in Resources */,
 				648E25D51B0B489600BD6AD7 /* PickerShadow.tiff in Resources */,
+				6415A30F1B20053A007C07FB /* SwatchMenuDown.tiff in Resources */,
 				648E25BF1B0B41FC00BD6AD7 /* MainMenu.xib in Resources */,
 				64311D351B0D8BD2005EF600 /* SwatchToolbar.tiff in Resources */,
 			);
